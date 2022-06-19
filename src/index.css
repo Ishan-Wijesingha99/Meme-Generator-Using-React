@@ -11,6 +11,8 @@ body {
 }
 
 
+
+/* navbar */
 .entire-navbar {
     display: flex;
     align-items: center;
@@ -35,6 +37,55 @@ body {
     color: white;
     font-weight: bold;
     font-size: 1rem;
+}
+
+
+
+/* form */
+.entire-form {
+    margin-top: 65px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70vw;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    align-items: center;
+    justify-items: center;
+    gap: 20px;
+}
+
+#top-line-label {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    justify-self: start;
+}
+
+#top-line-label input, #bottom-line-label input {
+    height: 40px;
+    width: 300px;
+    border: 2px solid grey;
+}
+
+#top-line-label input, #bottom-line-label input, #get-new-meme-btn {
+    border-radius: 7px;
+}
+
+#bottom-line-label {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    justify-self: end;
+}
+
+#get-new-meme-btn {
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+    height: 50px;
+    width: stretch;
+    font-size: 22px;
+    background-image: linear-gradient(to right, rgb(157, 51, 157), rgb(209, 59, 209));
+    color: white;
+    border: 0px;
 }
 
 
