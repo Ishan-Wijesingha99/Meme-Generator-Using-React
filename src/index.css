@@ -1,0 +1,41 @@
+
+/* general css */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+
+.entire-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(to right, rgb(157, 51, 157), rgb(209, 59, 209));
+    height: 100px;
+    padding: 20px;
+}
+
+.nav-left-side {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+#website-header {
+    color: white;
+    margin-left: 10px;
+}
+
+#nav-right-side {
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+
+
