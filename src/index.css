@@ -61,20 +61,24 @@ body {
     justify-self: start;
 }
 
+#bottom-line-label {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    justify-self: end;
+}
+
 #top-line-label input, #bottom-line-label input {
     height: 40px;
     width: 300px;
     border: 2px solid grey;
 }
 
-#top-line-label input, #bottom-line-label input, #get-new-meme-btn {
-    border-radius: 7px;
+#top-line-label input::placeholder, #bottom-line-label input::placeholder {
+    font-size: 16px;
 }
 
-#bottom-line-label {
-    grid-row: 1 / 2;
-    grid-column: 2 / 3;
-    justify-self: end;
+#top-line-label input, #bottom-line-label input, #get-new-meme-btn {
+    border-radius: 7px;
 }
 
 #get-new-meme-btn {
@@ -86,6 +90,10 @@ body {
     background-image: linear-gradient(to right, rgb(157, 51, 157), rgb(209, 59, 209));
     color: white;
     border: 0px;
+}
+
+#get-new-meme-btn:hover {
+    cursor: pointer;
 }
 
 
