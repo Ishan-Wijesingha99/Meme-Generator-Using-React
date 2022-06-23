@@ -100,6 +100,7 @@ body {
     margin: 50px auto;
     width: 50vw;
     display: block;
+    box-shadow: 0 0 2px 2px black;
 }
 
 
