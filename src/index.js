@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { ThingsComponent } from './components/challenge';
 import { Navbar } from './components/Navbar';
 import { TextForm } from './components/TextForm';
+import { TextFormUpdated } from './components/TextFormUpdated';
 import './index.css'
 
 
@@ -13,7 +14,8 @@ root.render(
   <React.StrictMode>
     <Navbar />
 
-    <TextForm />
+    {/* <TextForm /> */}
+    <TextFormUpdated />
 
     {/* <ThingsComponent /> */}
   </React.StrictMode>

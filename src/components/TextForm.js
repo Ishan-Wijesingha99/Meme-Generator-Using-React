@@ -16,7 +16,7 @@ export const TextForm = function() {
 
 
 
-    const [imageURL, getImageURL] = React.useState('');
+    const [imageURL, setImageURL] = React.useState('');
 
     const getRandomMemeImage = function(e) {
         // prevent page reload
@@ -26,8 +26,7 @@ export const TextForm = function() {
         let randomNumber = Math.floor(Math.random() * memesDataArray.data.memes.length);
         
         // based off random number, get a random meme URL
-        getImageURL(`${memesDataArray.data.memes[randomNumber].url}`)
-        console.log(imageURL);
+        setImageURL(`${memesDataArray.data.memes[randomNumber].url}`)
 
     }
 
