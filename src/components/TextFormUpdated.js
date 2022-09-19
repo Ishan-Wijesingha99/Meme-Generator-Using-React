@@ -1,5 +1,4 @@
 import React from "react";
-import { memesDataArray } from './MemesData';
 
 
 
@@ -13,8 +12,17 @@ export const TextFormUpdated = function() {
         randomImageURL: 'https://i.imgflip.com/gtj5t.jpg'
     })
 
-    // create another state variable that at first is just the memesDataArray
-    const [allMemeImages, setAllMemeImages] = React.useState(memesDataArray);
+    // create another state variable that at first is just an empty array
+    const [allMemeImages, setAllMemeImages] = React.useState([]);
+
+    // when the functional component is first rendered, this will execute, and whenever the randomImageURL is changed, this will execute
+    React.useEffect(() => {
+        fetch("https://api.imgflip.com/get_memes")
+        .then(res => res.json())
+        .then(memeData => {
+            setAllMemeImages(memeData.data.memes)            
+        })
+    }, [])
 
     // this function is executed every time the user clicks the "Get a new meme image" button, it retrieves a new meme image
     const getRandomMemeImage = function(e) {
@@ -22,13 +30,13 @@ export const TextFormUpdated = function() {
         e.preventDefault();
         
         // create random number between 0 and 99
-        let randomNumber = Math.floor(Math.random() * memesDataArray.data.memes.length);
+        let randomNumber = Math.floor(Math.random() * allMemeImages.length);
         
         // change the memeObject, with all of it's properties the exact same, accept for the randomImageURL, which changes based off the random number
         setMemeObject(prevObject => {
             return {
                 ...prevObject,
-                randomImageURL: allMemeImages.data.memes[randomNumber].url
+                randomImageURL: allMemeImages[randomNumber].url
             }
         })
     }
@@ -90,5 +98,5 @@ export const TextFormUpdated = function() {
             </div>
         </div>
     )
-} 
+}
 
